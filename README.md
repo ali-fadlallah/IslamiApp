@@ -1,5 +1,5 @@
 # islami
 
-![](https://i.ibb.co/fnP7cKx/screen-record.gif)
+sample of sebha tab.
 
-<img src="https://i.ibb.co/fnP7cKx/screen-record.gif"/>
+![](https://github.com/ali-fadlallah/IslamiApp/blob/e8a96f190bb70d38ad91aea2abc2c2d06b25c952/screen_record.gif)
