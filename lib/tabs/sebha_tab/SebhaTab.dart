@@ -21,67 +21,86 @@ class _SebhaTabState extends State<SebhaTab> {
     if (index > listOfAzkar.length - 1) {
       index = 0;
     }
-    return Column(
-      children: [
-        GestureDetector(
-          onTap: () {
-            setState(() {
-              startSebha();
-            });
-          },
-          child: Stack(
-            alignment: Alignment.topCenter,
+    return Container(
+      width: double.infinity,
+      child: Column(
+        children: [
+          Column(
             children: [
-              AspectRatio(
-                aspectRatio: 1,
-                child: RotatedBox(
-                  quarterTurns: numberOfTasbeh,
-                  child: Image.asset('assets/images/bodyofseb7a.png'),
-                ),
-              ),
-              ClipRRect(
-                child: Image.asset('assets/images/headofseb7a.png',
-                    height: 90, width: 90),
+              Stack(
+                children: [
+                  GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        startSebha();
+                      });
+                    },
+                    child: Container(
+                      margin: const EdgeInsets.only(top: 70),
+                      child: RotatedBox(
+                        quarterTurns: numberOfTasbeh,
+                        child: Image.asset(
+                          "assets/images/bodyofseb7a.png",
+                          width: 200,
+                          height: 200,
+                        ),
+                      ),
+                    ),
+                  ),
+                  Positioned(
+                    left: 0,
+                    right: 0,
+                    top: 0,
+                    child: Image(
+                      image: AssetImage('assets/images/headofseb7a.png'),
+                      width: 100,
+                      height: 100,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),
-        ),
-        Text(
-          'عدد التسبيحات',
-          style: TextStyle(
-              fontSize: 25, fontFamily: GoogleFonts.elMessiri().fontFamily),
-        ),
-        Container(
-          margin: EdgeInsets.symmetric(vertical: 10),
-          decoration: BoxDecoration(
-            color: Theme.of(context).colorScheme.primary,
-            borderRadius: BorderRadius.circular(20),
+          SizedBox(
+            height: 15,
           ),
-          padding: EdgeInsets.all(20),
-          child: Text(
-            '$counter',
+          Text(
+            'عدد التسبيحات',
             style: TextStyle(
-                fontSize: 25, fontFamily: GoogleFonts.inter().fontFamily),
+                fontSize: 25, fontFamily: GoogleFonts.elMessiri().fontFamily),
           ),
-        ),
-        Visibility(
-          visible: tasbehVisiable,
-          child: Container(
+          Container(
+            margin: EdgeInsets.symmetric(vertical: 10),
             decoration: BoxDecoration(
               color: Theme.of(context).colorScheme.primary,
-              borderRadius: BorderRadius.circular(50),
+              borderRadius: BorderRadius.circular(20),
             ),
-            padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+            padding: EdgeInsets.all(20),
             child: Text(
-              listOfAzkar[index],
+              '$counter',
               style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 25,
-                  fontFamily: GoogleFonts.inter().fontFamily),
+                  fontSize: 25, fontFamily: GoogleFonts.inter().fontFamily),
             ),
           ),
-        ),
-      ],
+          Visibility(
+            visible: tasbehVisiable,
+            child: Container(
+              decoration: BoxDecoration(
+                color: Theme.of(context).colorScheme.primary,
+                borderRadius: BorderRadius.circular(50),
+              ),
+              padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
+              child: Text(
+                listOfAzkar[index],
+                style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 25,
+                    fontFamily: GoogleFonts.inter().fontFamily),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 
