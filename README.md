@@ -15,4 +15,4 @@ For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
 
-<img src="https://s5.ezgif.com/tmp/ezgif-5-f79607e740.gif">
+![](https://s5.ezgif.com/tmp/ezgif-5-f79607e740.gif);
