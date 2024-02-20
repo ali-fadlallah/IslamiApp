@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class RadioTab extends StatelessWidget {
   const RadioTab({super.key});
@@ -13,10 +12,7 @@ class RadioTab extends StatelessWidget {
           Image.asset('assets/images/img_radio.png'),
           Text(
             'إذاعة القرآن الكريم',
-            style: TextStyle(
-                fontFamily: GoogleFonts.elMessiri().fontFamily,
-                fontSize: 25,
-                fontWeight: FontWeight.w400),
+            style: Theme.of(context).textTheme.titleLarge,
           ),
           SizedBox(
             height: 20,

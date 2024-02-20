@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:islami/tabs/hadeh_tab/HadethModel.dart';
+import 'package:islami/tabs/settings_tab/Theme/MyTheme.dart';
 
 class HadehDetails extends StatefulWidget {
   static const String routeName = 'hadeh_details';
@@ -18,7 +19,7 @@ class _HadehDetailsState extends State<HadehDetails> {
       height: double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/main_bg.png'),
+          image: AssetImage(MyThemeData.getBackgroundImage()),
           fit: BoxFit.fill,
         ),
       ),
@@ -33,11 +34,16 @@ class _HadehDetailsState extends State<HadehDetails> {
             child: Card(
               margin: EdgeInsets.all(20),
               child: Container(
-                  height: double.infinity,
-                  padding: EdgeInsets.all(20),
-                  child: SingleChildScrollView(
-                      child:
-                          Text(textAlign: TextAlign.right, '${arg.content}'))),
+                height: double.infinity,
+                padding: EdgeInsets.all(20),
+                child: SingleChildScrollView(
+                  child: Text(
+                    textAlign: TextAlign.right,
+                    '${arg.content}',
+                    style: Theme.of(context).textTheme.bodyMedium,
+                  ),
+                ),
+              ),
             ),
           ),
         ),
