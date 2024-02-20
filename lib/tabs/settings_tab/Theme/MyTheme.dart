@@ -16,7 +16,7 @@ class MyThemeData {
     colorScheme: ColorScheme.fromSeed(
         seedColor: primaryLight,
         primary: primaryLight,
-        secondary: secondaryLight),
+        secondary: primaryLight),
     scaffoldBackgroundColor: Colors.transparent,
     bottomNavigationBarTheme: BottomNavigationBarThemeData(
       showUnselectedLabels: false,
@@ -37,7 +37,7 @@ class MyThemeData {
       ),
     ),
     cardTheme:
-        CardTheme(color: primaryLight, surfaceTintColor: Colors.transparent),
+        CardTheme(color: Colors.white, surfaceTintColor: Colors.transparent),
     textTheme: TextTheme(
       titleLarge: TextStyle(
           fontSize: 25,
@@ -46,6 +46,11 @@ class MyThemeData {
           fontFamily: GoogleFonts.elMessiri().fontFamily),
       titleMedium: TextStyle(
           fontSize: 25,
+          color: Colors.black,
+          fontWeight: FontWeight.w400,
+          fontFamily: GoogleFonts.inter().fontFamily),
+      titleSmall: TextStyle(
+          fontSize: 20,
           color: Colors.black,
           fontWeight: FontWeight.w400,
           fontFamily: GoogleFonts.inter().fontFamily),
