@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami/home_screen/HomeScreen.dart';
 import 'package:islami/splash_screen/SplashScreen.dart';
@@ -50,6 +51,9 @@ class MyApplication extends StatelessWidget {
         SuraDetails.routeName: (context) => SuraDetails(),
         HadehDetails.routeName: (context) => HadehDetails(),
       },
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      locale: Locale('ar'),
     );
   }
 }
