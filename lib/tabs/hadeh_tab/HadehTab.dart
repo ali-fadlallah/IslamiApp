@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami/tabs/hadeh_tab/HadehWidget.dart';
 import 'package:islami/tabs/hadeh_tab/HadethModel.dart';
 
@@ -28,7 +29,7 @@ class _HadehTabState extends State<HadehTab> {
           margin: EdgeInsets.only(top: 10),
           color: Theme.of(context).colorScheme.secondary,
         ),
-        Text('Hadeh', style: Theme.of(context).textTheme.titleLarge),
+        Text(AppLocalizations.of(context)!.hadeh_number, style: Theme.of(context).textTheme.titleLarge),
         Container(
           height: 3,
           color: Theme.of(context).colorScheme.secondary,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami/tabs/quran_tab/suraWidget.dart';
 
 class QuranTab extends StatelessWidget {
@@ -134,7 +135,7 @@ class QuranTab extends StatelessWidget {
           color: Theme.of(context).colorScheme.secondary,
         ),
         Text(
-          'Sura Name',
+          AppLocalizations.of(context)!.sura_name,
           style: Theme.of(context).textTheme.titleLarge,
         ),
         Container(
