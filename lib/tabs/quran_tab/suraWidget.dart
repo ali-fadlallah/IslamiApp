@@ -20,8 +20,7 @@ class SuraWidget extends StatelessWidget {
         child: Text(
           textAlign: TextAlign.center,
           suraName,
-          style: TextStyle(
-              color: Theme.of(context).colorScheme.secondary, fontSize: 25),
+          style: Theme.of(context).textTheme.titleSmall,
         ),
       ),
     );

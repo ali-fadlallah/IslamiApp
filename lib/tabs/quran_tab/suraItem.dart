@@ -12,7 +12,7 @@ class SuraItem extends StatelessWidget {
       child: Text(
         suraText,
         textAlign: TextAlign.center,
-        style: TextStyle(fontSize: 20),
+        style: Theme.of(context).textTheme.bodyMedium,
       ),
     );
   }
