@@ -22,30 +22,24 @@ class _HadehTabState extends State<HadehTab> {
       children: [
         Image.asset(
           'assets/images/hadeh_logo.png',
+          width: 250,
         ),
         Container(
           height: 3,
           margin: EdgeInsets.only(top: 10),
-          color: Color(0xFFB7935F),
+          color: Theme.of(context).colorScheme.secondary,
         ),
-        Text(
-          AppLocalizations.of(context)!.hadeh_number,
-          style: TextStyle(
-              fontSize: Theme.of(context).appBarTheme.titleTextStyle?.fontSize,
-              fontFamily:
-                  Theme.of(context).appBarTheme.titleTextStyle?.fontFamily),
-        ),
+        Text(AppLocalizations.of(context)!.hadeh_number, style: Theme.of(context).textTheme.titleLarge),
         Container(
           height: 3,
-          color: Color(0xFFB7935F),
+          color: Theme.of(context).colorScheme.secondary,
         ),
         Expanded(
           child: ListView.separated(
             separatorBuilder: (context, index) {
               return Container(
                 height: 2,
-                color:
-                    Theme.of(context).bottomNavigationBarTheme.backgroundColor,
+                color: Theme.of(context).colorScheme.secondary,
                 margin: EdgeInsets.symmetric(horizontal: 50),
               );
             },

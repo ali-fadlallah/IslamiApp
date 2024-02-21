@@ -14,10 +14,7 @@ class RadioTab extends StatelessWidget {
           Image.asset('assets/images/img_radio.png'),
           Text(
             AppLocalizations.of(context)!.ezaaelquran,
-            style: TextStyle(
-                fontFamily: GoogleFonts.elMessiri().fontFamily,
-                fontSize: 25,
-                fontWeight: FontWeight.w400),
+            style: Theme.of(context).textTheme.titleLarge,
           ),
           SizedBox(
             height: 20,

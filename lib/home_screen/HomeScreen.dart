@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:islami/tabs/settings_tab/Theme/MyTheme.dart';
 
 import '../tabs/hadeh_tab/HadehTab.dart';
 import '../tabs/quran_tab/QuranTab.dart';
@@ -34,7 +35,7 @@ class _HomeScreenState extends State<HomeScreen> {
       height: double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/main_bg.png'),
+          image: AssetImage(MyThemeData.getBackgroundImage()),
           fit: BoxFit.fill,
         ),
       ),
@@ -42,6 +43,7 @@ class _HomeScreenState extends State<HomeScreen> {
         appBar: AppBar(
           title: Text(
             AppLocalizations.of(context)!.appTitle,
+            style: Theme.of(context).textTheme.titleLarge,
           ),
         ),
         bottomNavigationBar: BottomNavigationBar(

@@ -74,9 +74,7 @@ class _SebhaTabState extends State<SebhaTab> {
           ),
           Text(
             AppLocalizations.of(context)!.tasbeh_number,
-            style: TextStyle(
-                fontSize: 25, fontFamily: GoogleFonts.elMessiri().fontFamily),
-          ),
+            style: Theme.of(context).textTheme.titleLarge),
           Container(
             margin: EdgeInsets.symmetric(vertical: 10),
             decoration: BoxDecoration(
@@ -86,25 +84,20 @@ class _SebhaTabState extends State<SebhaTab> {
             padding: EdgeInsets.all(20),
             child: Text(
               '$counter',
-              style: TextStyle(
-                  fontSize: 25, fontFamily: GoogleFonts.inter().fontFamily),
+              style: Theme.of(context).textTheme.titleLarge,
             ),
           ),
           Visibility(
             visible: tasbehVisiable,
             child: Container(
               decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.primary,
+                color: Theme.of(context).colorScheme.secondary,
                 borderRadius: BorderRadius.circular(50),
               ),
               padding: EdgeInsets.symmetric(horizontal: 25, vertical: 5),
               child: Text(
                 listOfAzkar[index],
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 25,
-                    fontFamily: GoogleFonts.inter().fontFamily),
-              ),
+                  style: Theme.of(context).textTheme.titleLarge),
             ),
           ),
         ],

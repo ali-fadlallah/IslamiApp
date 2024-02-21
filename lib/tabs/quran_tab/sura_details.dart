@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:islami/tabs/quran_tab/SuraModel.dart';
 import 'package:islami/tabs/quran_tab/suraItem.dart';
+import 'package:islami/tabs/settings_tab/Theme/MyTheme.dart';
 
 class SuraDetails extends StatefulWidget {
   static const String routeName = 'sura_details';
@@ -26,7 +27,7 @@ class _SuraDetailsState extends State<SuraDetails> {
       height: double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/main_bg.png'),
+          image: AssetImage(MyThemeData.getBackgroundImage()),
           fit: BoxFit.fill,
         ),
       ),

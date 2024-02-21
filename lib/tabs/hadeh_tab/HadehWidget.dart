@@ -23,8 +23,7 @@ class HadehWidget extends StatelessWidget {
         child: Text(
           textAlign: TextAlign.center,
           HadehName,
-          style: TextStyle(
-              color: Theme.of(context).colorScheme.secondary, fontSize: 25),
+          style: Theme.of(context).textTheme.titleSmall,
         ),
       ),
     );
