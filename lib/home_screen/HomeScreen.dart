@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:islami/tabs/settings_tab/Theme/MyTheme.dart';
+import 'package:islami/provider/SettingsProvider.dart';
+import 'package:provider/provider.dart';
 
 import '../tabs/hadeh_tab/HadehTab.dart';
 import '../tabs/quran_tab/QuranTab.dart';
@@ -30,12 +31,14 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   Widget build(BuildContext context) {
+    var settingProvidor = Provider.of<SettingsProvider>(context);
+
     return Container(
       width: double.infinity,
       height: double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage(MyThemeData.getBackgroundImage()),
+          image: AssetImage(settingProvidor.getBackgroundImage()),
           fit: BoxFit.fill,
         ),
       ),

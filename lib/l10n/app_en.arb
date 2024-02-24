@@ -11,5 +11,9 @@
   "sohabALlah": "Sobhan Allah",
   "alhamdelallah": "Alhamd Lellah",
   "allahAkbar": "Allah Akbar",
-  "ezaaelquran": "Holy Quran Radio"
+  "ezaaelquran": "Holy Quran Radio",
+  "language": "Language",
+  "theme": "Theme",
+  "dark": "Dark",
+  "light": "Light"
 }
