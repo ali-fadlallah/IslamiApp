@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:islami/home_screen/HomeScreen.dart';
-import 'package:islami/tabs/settings_tab/Theme/MyTheme.dart';
+import 'package:islami/provider/SettingsProvider.dart';
+import 'package:provider/provider.dart';
 
 class SplashScreen extends StatelessWidget {
   static const String routeName = 'SplashScreen';
 
   @override
   Widget build(BuildContext context) {
+    var settingProvidor = Provider.of<SettingsProvider>(context);
+
     Future.delayed(const Duration(seconds: 2), () {
       Navigator.pushReplacementNamed(context, HomeScreen.routeName);
     });
     return Scaffold(
       body: Image.asset(
-        MyThemeData.getSplashImage(),
+        settingProvidor.getSplashImage(),
         width: double.infinity,
         height: double.infinity,
         fit: BoxFit.fill,

@@ -1,14 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:google_fonts/google_fonts.dart';
+import 'package:islami/MyTheme.dart';
 import 'package:islami/home_screen/HomeScreen.dart';
+import 'package:islami/provider/SettingsProvider.dart';
 import 'package:islami/splash_screen/SplashScreen.dart';
 import 'package:islami/tabs/hadeh_tab/hadeh_details.dart';
 import 'package:islami/tabs/quran_tab/sura_details.dart';
-import 'package:islami/tabs/settings_tab/Theme/MyTheme.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(MyApplication());
+  runApp(
+    ChangeNotifierProvider(
+      create: (context) => SettingsProvider(),
+      child: const MyApplication(),
+    ),
+  );
 }
 
 class MyApplication extends StatelessWidget {
@@ -16,10 +22,11 @@ class MyApplication extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var settingProvider = Provider.of<SettingsProvider>(context);
     return MaterialApp(
       theme: MyThemeData.lightTheme,
       darkTheme: MyThemeData.darkTheme,
-      themeMode: ThemeMode.dark,
+      themeMode: settingProvider.selectedTheme,
       debugShowCheckedModeBanner: false,
       initialRoute: SplashScreen.routeName,
       routes: {
@@ -30,7 +37,7 @@ class MyApplication extends StatelessWidget {
       },
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      locale: Locale('ar'),
+      locale: Locale(settingProvider.selectedLocale),
     );
   }
 }

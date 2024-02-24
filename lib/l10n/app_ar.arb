@@ -11,5 +11,9 @@
   "sohabALlah": "سبحان الله",
   "alhamdelallah": "الحمد لله",
   "allahAkbar": "الله اكبر",
-  "ezaaelquran": "إذاعة القرآن الكريم"
+  "ezaaelquran": "إذاعة القرآن الكريم",
+  "language": "اللغة",
+  "theme": "الواجهه",
+  "dark": "الوضع الليلي",
+  "light": "الوضع النهاري"
 }
