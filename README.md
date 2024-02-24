@@ -1,7 +1,5 @@
 # Islami
 
-Project Name: Islami
-
 Description:
 Islami is a comprehensive Islamic application designed to enhance your spiritual journey. With a
 user-friendly interface, it provides access to various features to enrich your Islamic practices and
