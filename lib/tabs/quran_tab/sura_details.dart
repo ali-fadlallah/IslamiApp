@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:islami/provider/SettingsProvider.dart';
 import 'package:islami/tabs/quran_tab/SuraModel.dart';
 import 'package:islami/tabs/quran_tab/suraItem.dart';
+import 'package:provider/provider.dart';
 
 class SuraDetails extends StatefulWidget {
   static const String routeName = 'sura_details';
@@ -15,6 +17,7 @@ class _SuraDetailsState extends State<SuraDetails> {
 
   @override
   Widget build(BuildContext context) {
+    var settingProvidor = Provider.of<SettingsProvider>(context);
     SuraModel arg = ModalRoute.of(context)?.settings.arguments as SuraModel;
 
     if (suraList.isEmpty) {
@@ -26,7 +29,7 @@ class _SuraDetailsState extends State<SuraDetails> {
       height: double.infinity,
       decoration: BoxDecoration(
         image: DecorationImage(
-          image: AssetImage('assets/images/main_bg.png'),
+          image: AssetImage(settingProvidor.getBackgroundImage()),
           fit: BoxFit.fill,
         ),
       ),
@@ -41,13 +44,13 @@ class _SuraDetailsState extends State<SuraDetails> {
           child: suraList.isEmpty
               ? CircularProgressIndicator()
               : Card(
-                  margin: EdgeInsets.all(20),
-                  child: ListView.builder(
-                      itemBuilder: (context, index) {
-                        return SuraItem(suraText: suraList[index]);
-                      },
-                      itemCount: suraList.length),
-                ),
+            margin: EdgeInsets.all(20),
+            child: ListView.builder(
+                itemBuilder: (context, index) {
+                  return SuraItem(suraText: suraList[index]);
+                },
+                itemCount: suraList.length),
+          ),
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:islami/tabs/quran_tab/suraWidget.dart';
 
 class QuranTab extends StatelessWidget {
@@ -131,26 +132,22 @@ class QuranTab extends StatelessWidget {
         Container(
           height: 3,
           margin: EdgeInsets.only(top: 10),
-          color: Color(0xFFB7935F),
+          color: Theme.of(context).colorScheme.secondary,
         ),
         Text(
-          'Sura Name',
-          style: TextStyle(
-              fontSize: Theme.of(context).appBarTheme.titleTextStyle?.fontSize,
-              fontFamily:
-                  Theme.of(context).appBarTheme.titleTextStyle?.fontFamily),
+          AppLocalizations.of(context)!.sura_name,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
         Container(
           height: 3,
-          color: Color(0xFFB7935F),
+          color: Theme.of(context).colorScheme.secondary,
         ),
         Expanded(
           child: ListView.separated(
             separatorBuilder: (context, index) {
               return Container(
                 height: 2,
-                color:
-                    Theme.of(context).bottomNavigationBarTheme.backgroundColor,
+                color: Theme.of(context).colorScheme.secondary,
                 margin: EdgeInsets.symmetric(horizontal: 50),
               );
             },
